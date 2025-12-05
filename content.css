@@ -1,0 +1,60 @@
+.location-blocker-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 16px;
+}
+
+.location-blocker-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.location-blocker-content p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.location-blocker-content small {
+    display: block;
+    color: #aaa;
+    margin-bottom: 12px;
+}
+
+.location-blocker-show-btn {
+    background: #1d9bf0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.location-blocker-show-btn:hover {
+    background: #1a8cd8;
+}
+
+.location-blocker-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #f4212e;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 101;
+}

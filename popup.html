@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Location Blocker</title>
+    <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📍 Location Blocker</h1>
+            <p class="subtitle">Block X accounts by location</p>
+        </div>
+
+        <div class="toggle-section">
+            <label class="toggle">
+                <input type="checkbox" id="enableFilter">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Enable Blocking</span>
+        </div>
+
+        <div class="toggle-section">
+            <label class="toggle">
+                <input type="checkbox" id="enableFetching">
+                <span class="slider"></span>
+            </label>
+            <div class="toggle-label-group">
+                <span class="toggle-label">Auto-fetch Locations</span>
+                <span class="toggle-hint" id="queueStatus"></span>
+            </div>
+        </div>
+
+        <div class="locations-section">
+            <h2>Blocked Locations</h2>
+            <div class="add-location">
+                <input type="text" id="newLocation" placeholder="Enter location (e.g., Russia)">
+                <button id="addLocation">Add</button>
+            </div>
+            <ul id="locationList" class="location-list">
+                <!-- Locations will be inserted here -->
+            </ul>
+            <p class="hint" id="emptyHint">No locations blocked yet</p>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-value" id="blockedCount">0</span>
+                <span class="stat-label">Tweets Hidden</span>
+            </div>
+        </div>
+
+        <div class="users-section">
+            <div class="users-header">
+                <h2>Cataloged Users</h2>
+                <button id="clearCache" class="clear-btn" title="Clear all cached data">Clear</button>
+            </div>
+            <div class="users-filter">
+                <input type="text" id="userSearch" placeholder="Search users...">
+            </div>
+            <div id="usersList" class="users-list">
+                <!-- Users will be inserted here -->
+            </div>
+            <p class="hint" id="usersEmptyHint">No users cataloged yet</p>
+            <p class="users-count" id="usersCount"></p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
